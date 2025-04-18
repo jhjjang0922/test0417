@@ -1,0 +1,499 @@
+#wrap{width: 100%;}
+
+/* 상단영역 */
+#header{
+  float: left;
+  width: 100%;
+  height: 160px;
+}
+#header_top{ 
+  margin: 0 auto;
+   width: 1000px;
+  height: 115px;
+  position: relative;
+}
+#header_top .logo{
+  float: left;
+  margin: 50px 0 0 0;
+}
+#header_top .qmenu{
+  float: left;
+  margin: 55px 0 0 140px;
+}
+#header_top .qmenu li{float: left;}
+/*메뉴사이에 수직으로 직선모양외에 것을 표현하는 방법*/
+#header_top .qmenu li:after{
+  content:"·"; 
+  font-size: 20px;
+  color: #666;
+  font-weight: 600;
+  padding:0 5px;
+}
+/*li중에서 첫번째요소*/
+#header_top .qmenu li:first-child{}
+/*li중에서 마지막번째요소에서 로딩된후에 선언*/
+#header_top .qmenu li:last-child::after{
+  content:" "; 
+}
+#header_top .qmenu li a{
+  font-size: 16px; 
+  color: #666;
+  font-weight: 600;
+}
+#header_top .input{
+  float: left;
+  margin: 55px 0 0 20px;
+  width: 260px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  line-height: 25px;
+}
+#header_top .input span{
+  float: left;
+  padding-left: 8px;
+  color: #666;
+}
+#header_top .input a{
+  float: right;
+  margin-top: 1.5px;
+}
+
+#header_top .info_mn{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+#header_top .info_mn li{
+  float: left;
+}
+#header_top .info_mn a{
+  font-size: 12px;
+}
+#header_top .info_mn li:after{
+  content: "|";
+  font-size: 12px;
+  padding:0 5px;
+  position: relative;
+  top: -1px;
+}
+#header_top .info_mn li:last-child::after{
+  content: "";
+}
+
+#header_nav{
+  width: 100%;
+  height: 46px;
+  background:url(../images/nav_area.jpg) no-repeat 50% 0;
+}
+#header_nav ul{
+  margin:0 auto;
+  width: 1005px;
+}
+#header_nav ul li{
+  float: left;
+}
+
+/* 메인이미지영역 */
+#main_img{
+  float: left;
+  width: 100%;
+  height: 455px;
+  background:url(../images/main_img.jpg) no-repeat 50% 0 ;
+}
+
+/* 콘텐츠영역 */
+#contents{
+  float: left;
+  width: 100%;
+}
+#contents .item{
+  margin: 0 auto;
+  margin-top: 40px;  
+  width: 1000px;
+  height: 260px;
+}
+#contents .item_h{
+  float: left;
+  width: 170px;
+  height: 260px;
+}
+#contents .item_h h3{
+  font-size:22px;
+  color: #333;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding:18px 0;
+}
+#contents .item_h ul{
+  margin-top: 30px;
+}
+#contents .item_h ul li{
+  margin-bottom: 8px;
+}
+#contents .item_h ul a{
+  font-size: 18px;
+  font-weight: 900;
+}
+#contents .item_h ul a:hover{
+  color: orange;
+  text-decoration: underline;
+}
+#contents .item_h ul a:hover::after{
+  content:" >";
+}
+
+#contents .item_b{
+  float:right;
+  width: 800px;
+  height: 260px;
+  font-size: 0px;/*
+  .obj에서 display:inline-block으로 가로배치했을때 여백이 생깁니다
+  여백이 안생기게 하기 위해서 font-size: 0px을 여기에 선언합니다.
+  */
+}
+/* 800 - 185*4(740) = 60 / 3(여백 수) =>20 */
+#contents .item_b .obj{
+  /* float: left; */
+  display:inline-block;
+  margin-right: 20px;
+  box-sizing: border-box;
+  /* 
+  box-sizing: border-box;는 대표적으로 봤을때
+  보드값을 현재 크기안에 포함시킴으로 크기 변화 안생기게함  */
+  width: 185px;
+  height: 260px;
+  border: 1px solid #ccc;
+}
+
+#contents .item_b .obj:last-child{
+  margin-right: 0px;
+}
+
+#contents .item_b img{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+#contents .item_b .txt_area{
+  padding: 15px 0 0 10px;
+  /*
+   패딩값을 적용할때 가로세로크기가 설정되었을때
+   패딩값만큼 크기가 확장된다 하지만 가로세기 설정 
+   안되었을때는 확장되지 않는다
+  */
+}
+#contents .item_b .txt_area h4{
+  font-size: 13px;
+}
+#contents .item_b .txt_area span{
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+#contents .banner{
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1000px;
+  height: 280px;
+}
+/*1000 - (321*3) = 37/2 */
+#contents .banner a{
+  float: left;
+  margin-right:18.5px;
+}
+#contents .banner a:last-child{
+  margin-right:0px;
+}
+
+#contents .movie{
+  margin-top: 40px;
+  width: 100%;
+  height: 300px;
+  background:url(../images/movie.png) no-repeat 50% 0; 
+  position: relative;
+}
+#contents .movie a{
+  display: block;
+  position: absolute;
+  top:200px;
+  left: 50%;
+  margin-left: -80px;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+#contents .movie a:hover{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  transition:all 0.7s;
+}
+
+#contents .style{
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 1000px;
+  height: 260px;
+}
+#contents .style_h{
+  float: left;
+  width: 170px;
+  height: 260px;
+}
+#contents .style_h h3{
+  font-size: 22px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 18px 0;
+}
+#contents .style_h ul{
+  margin-top: 30px;
+}
+#contents .style_h li{
+  margin-bottom: 8px;
+}
+#contents .style_h a{
+  font-size: 18px;
+}
+
+#contents .style_b{
+  float: right;
+  width: 800px;
+  height: 260px;
+}
+#contents .style_b ul{}
+#contents .style_b li{
+  float: left;
+  width: 185px;
+  height: 260px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#contents .style_b li:last-child{
+  margin-right: 0px;
+}
+#contents .style_b li img{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+#contents .style_b li .txt_area{
+  width: 100%;
+  padding: 15px 0 0 8px;
+}
+#contents .style_b li .txt_area h4{
+  font-size: 13px;
+}
+#contents .style_b li .txt_area span{
+  font-size: 11px;
+}
+
+#contents .go_btns{
+  margin: 0 auto;
+  margin-top: 45px;
+  width: 1000px;
+  height: 390px;
+}
+#contents .go_btns .group{
+  float: left;
+  width: 492px;
+}
+#contents .go_btns .group a:first-child{}
+#contents .go_btns .group a:last-child{
+  margin-top: 15px;
+  display: block;
+  /*
+  마진값이 적용이 안되는 경우 현재 요소가 인라인레벨요소이기때문
+  해결방법은 display:block를 선언한다
+  */
+}
+
+#contents .go_btns > a{
+  float: right;
+}
+
+#contents .info_area{ 
+  margin-top: 80px;
+  width: 100%;
+  height: 162px;
+  background:url(../images/footer_top_bg.jpg) repeat-x 0 0;
+}
+#contents .info_area_in{ 
+  margin: 0 auto;
+  width: 1000px;
+  height: 162px;
+}
+#contents .info_area_in img{
+  float: left;
+}
+#contents .info_area_in .notice{
+  width: 100%;
+}
+#contents .notice h4{
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  line-height: 50px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+#contents .notice p{
+  float: left;
+  margin-left:30px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 50px;
+}
+#contents .notice span{
+  float: right;
+  font-size: 12px;
+  color: #fff;
+  padding-right: 5px;
+  line-height: 50px;
+}
+
+/* 하단영역 */
+#footer{
+  float: left;
+  width: 100%;
+}
+#footer .footer_top{
+  margin: 0 auto;
+  width:1000px;
+  height:290px;
+}
+#footer .footer_top .all{
+  float: left;
+  margin: 50px 0 0 10px;
+}
+#footer .footer_top .all>li{
+  float: left;
+  margin-right: 50px;
+}
+#footer .footer_top .sub{}
+#footer .footer_top .sub li{
+  margin-bottom: 5px;
+}
+#footer .footer_top .sub li:first-child h4{
+  font-size: 18px;
+  color: #000;
+}
+#footer .footer_top .sub a{
+  font-size: 15px;
+  color: #666;
+}
+
+#footer .customer{
+  float: right;
+  width: 240px;
+}
+#footer .customer .ttl{
+  padding: 20px 0 6px 0;
+  font-size: 30px;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#footer .customer .s_ttl{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#footer .customer .txt{
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+#footer .customer .app{}
+#footer .customer .app li{
+  float: left;
+  margin: 0 2.5px;
+  width: 110px;
+  height: 60px;
+  border:1px solid #ccc;
+  text-align: center;
+  line-height: 60px;
+} 
+
+#footer .footer_line{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+#footer .footer_bom{
+  margin: 0 auto;
+  width:1000px;
+  height:160px;
+}
+
+#footer .footer_bom .logo2{
+  float: left;
+  margin: 25px 0 0 5px;
+  width: 70px;
+  height: 60px;
+  border: 1px solid #333;
+}
+
+#footer .footer_bom .group{
+  float: left;
+  margin: 10px 0 0 15px;
+}
+
+#footer .info_mn{}
+#footer .info_mn li{
+  float: left;
+}
+#footer .info_mn li:after{
+  content: '/';
+  font-size: 14px;
+  padding: 0 5px;
+}
+#footer .info_mn li:last-child::after{
+  content: '';
+}
+#footer .info_mn li:first-child{}
+#footer .info_mn li:nth-child(1) a{
+  color:red ;
+}
+#footer .info_mn li:nth-child(2) a{
+  color:rgb(255, 157, 0) ;
+}
+#footer .info_mn li:nth-child(3) a{
+  color:rgb(242, 255, 0) ;
+}
+#footer .info_mn li:nth-child(4) a{
+  color:rgb(9, 255, 0) ;
+}
+#footer .info_mn li:nth-child(5) a{
+  color:rgb(0, 47, 255) ;
+}
+#footer .info_mn li:last-child{}
+#footer .info_mn a{
+  font-size: 14px;
+  font-weight: 900;
+  color: #000;
+} 
+
+#footer .footer_bom .group2{
+  float: right;
+}
+#footer .group2 .sns{
+  margin-top: 30px;
+}
+#footer .group2 .sns li{
+  float: left;
+  margin-right: 5px;
+}
+#footer .group2 .selectMn{
+  margin-top: 10px;
+  width: 160px;
+  height: 25px;
+  font-size: 15px;
+  color: #333;
+  border: 1px solid #ccc;
+}

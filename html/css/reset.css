@@ -1,0 +1,28 @@
+*{
+  margin: 0; 
+  padding: 0;
+}
+
+body{
+  margin: 0; 
+  padding: 0;
+  font-size: 12px;
+  font-family: "맑은고딕";
+  color:#333;
+}
+
+ul, li{
+  list-style: none;/*리스트태그에블릿기호 기본적으로 안보임을 설정*/
+}
+
+img{border:0}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+a:link{}/*링크안에 글자기본값 설정*/
+a:hover{}/*링크위에 마우스 올라갔을때 설정*/
+a:active{}/*링크를 누르는 순간 설정*/
+a:visited{}/*링크를 한번 클릭한 설정*/
